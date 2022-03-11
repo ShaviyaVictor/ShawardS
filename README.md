@@ -4,7 +4,6 @@ This is a clone of Instagram where people share their images and videos for othe
 Below is the project's screenshot:     
 ![ShawardS_Home.Pg_Screenshot](#)
 ![ShawardS_Profile.Pg_Screenshot](#)
-![ShawardS_AddPost.Pg_Screenshot](#)
 
 
 #### Live link to site
@@ -14,7 +13,7 @@ The project was deployed to Heroku and GitHub pages for publication.
 
 ## Application Setup Instructions
 - Open Terminal {Ctrl+Alt+T}     
-- git clone [shawards_project](#)      
+- git clone [shawards_project](https://github.com/ShaviyaVictor/ShawardS)      
 - cd instagram_project      
 - code . or atom . based on the text editor you have.
 
@@ -106,7 +105,7 @@ Follow along with this [Deployment Documentation](https://gist.github.com/newton
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](#) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/ShaviyaVictor/ShawardS/blob/main/LICENSE) file for details.
 
 ## Acknowledgments
 
