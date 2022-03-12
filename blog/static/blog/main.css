@@ -1,0 +1,29 @@
+/* For titles and headings
+font-family: 'Old Standard TT', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap');
+/* For paragraphs
+font-family: 'Karma', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Karma&display=swap');
+/* For Links and NavBar
+font-family: 'Marcellus', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Old Standard TT',
+}
+
+p {
+  font-family: 'Karma', serif;
+}
+
+a, button {
+  font-family: 'Marcellus', serif;
+}
+
+
+
+
+
+
