@@ -1,18 +1,23 @@
+{% extends 'blog/base.html' %}
 
 
 
 
+{% block content %}
 
-<h1>Blog Home</h1>
+  <h1>Blog Home</h1>
 
-{% for post in posts %}
-  <h3>
-    {{ post.title }}
-  </h3>
-  <p>
-    By {{ post.author }}, {{ post.date_posted }}
-  </p>
-  <small>
-    From {{ post.location }}
-  </small>
-{% endfor %}
+  {% for post in posts %}
+    <h3>
+      {{ post.title }}
+    </h3>
+    <p>
+      By {{ post.author }}, {{ post.date_posted }}
+    </p>
+    <small>
+      From {{ post.location }}
+    </small>
+  {% endfor %}
+
+
+{% endblock content %}
