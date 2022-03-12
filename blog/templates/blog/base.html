@@ -34,61 +34,72 @@
   <body>
 
     
+    
+    {% block header %}    
     <!-- Start of the Navbar section -->
-    <header class="site-header">
 
-      <div class="nav justify-content-center">
-        <h5>
-          #StopWarInUkraine
-        </h5>
-      </div>
 
-      <nav class="navbar navbar-expand-md navbar-light bg-steel fixed-top border-bottom">
-        <div class="container">
-          <a class="navbar-brand mr-5" href="{% url 'blog-home' %}">
-            Instagram-Lite
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarToggle">
-            <form class="d-flex ml-5">
-              <input class="form-control me-2" type="search" placeholder="Find a photo..." aria-label="Search">
-            </form>
-            <div class="navbar-nav mr-auto ml-5">
-              <a class="nav-item nav-link" href="{% url 'blog-home' %}">
-                <i class="bi bi-house-door-fill icons ml-2"></i>
-              </a>
-              <a class="nav-item nav-link" href="{% url 'blog-messenger' %}">
-                <i class="bi bi-messenger icons ml-2"></i>
-              </a>
-              <a class="nav-item nav-link" href="{% url 'post-create' %}">
-                <i class="bi bi-plus-circle-fill icons ml-2"></i>
-              </a>
-              <a class="nav-item nav-link" href="{% url 'profile' %}">
-                <i class="bi bi-person-square icons ml-2"></i>
-              </a>
+    <div class="container-fluid">
+
+      <header class="site-header">
+
+        <nav class="navbar navbar-expand-md navbar-light bg-steel fixed-top border-bottom">
+          <div class="container">
+            <a class="navbar-brand mr-5" href="{% url 'blog-home' %}">
+              ShawardS
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggle">
+              <form class="d-flex ml-5">
+                <input class="form-control me-2" type="search" placeholder="Find a photo..." aria-label="Search">
+              </form>
+              <div class="navbar-nav mr-auto ml-5">
+                <a class="nav-item nav-link" href="{% url 'blog-home' %}">
+                  <i class="bi bi-house-door-fill icons ml-2"></i>
+                </a>
+                <a class="nav-item nav-link" href="{% url 'blog-collection' %}">
+                  <i class="bi bi-messenger icons ml-2"></i>
+                </a>
+                <a class="nav-item nav-link" href="{% url 'blog-talent' %}">
+                  <i class="bi bi-plus-circle-fill icons ml-2"></i>
+                </a>
+                <a class="nav-item nav-link" href="{% url 'blog-blog' %}">
+                  <i class="bi bi-plus-circle-fill icons ml-2"></i>
+                </a>
+                <a class="nav-item nav-link" href="{% url 'blog-about' %}">
+                  <i class="bi bi-plus-circle-fill icons ml-2"></i>
+                </a>
+                <a class="nav-item nav-link" href="{% url 'blog-contact' %}">
+                  <i class="bi bi-plus-circle-fill icons ml-2"></i>
+                </a>
+              </div>
+  
+              <!-- Navbar Right Side -->
+              
+              <div class="navbar-nav">
+  
+                
+  
+                <a class="nav-item nav-link" href="#">Logout</a>
+  
+                
+                
+                <a class="nav-item nav-link" href="#">Login</a>
+              </div>
+  
+  
             </div>
-
-            <!-- Navbar Right Side -->
-            
-            <div class="navbar-nav">
-
-              
-
-              <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
-
-              
-              
-              <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-            </div>
-
-
           </div>
-        </div>
-      </nav>
+        </nav>
+  
+      </header>
 
-    </header>
+    </div>
+
+    
+    {% endblock %}
     <!-- End of the NavBar -->
 
 
@@ -100,11 +111,22 @@
 
           {% block content %}
 
+
+
           {% endblock %}
 
         </div>
       </div>      
     </main>    
+
+
+
+
+    {% block footer %}
+
+
+
+    {% endblock %}
 
 
 
