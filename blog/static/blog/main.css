@@ -1,3 +1,5 @@
+/* font-family: 'Lora', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap');
 /* For titles and headings
 font-family: 'Old Standard TT', serif; */
 @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap');
@@ -26,8 +28,59 @@ a, button {
   font-family: 'Marcellus', serif;
 }
 
+.logo {
+  font-size: 1.5em;
+  font-family: 'Lora', serif;
+}
 
 
 
 
 
+
+
+
+
+/* Styling the footer section */
+
+footer {
+  
+  width: 100%;
+  padding: 0.3em;
+}
+
+.mt-2em {
+  margin: 1.5em 0em 1.5em 0em !important;
+}
+
+.icons {
+  display: inline !important;
+}
+
+.futa {
+  margin: 1em;
+  color: #000 !important;
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.futa:hover {
+  color: rgb(101, 209, 101) !important;
+}
+
+
+
+
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  
+
+  
+}
