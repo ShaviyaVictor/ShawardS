@@ -6,37 +6,37 @@ from django.http import HttpResponse
 # Create your views here.
 def home(request) :
 
-  return HttpResponse()
+  return render(request, 'blog/home.html')
 
 
 
 def collection(request) :
 
-  return HttpResponse('<h1>Blog Collections</h1>')
+  return render(request, 'blog/collection.html')
 
 
 
 def talent(request) :
 
-  return HttpResponse('<h1>Blog Talent</h1>')
+  return render(request, 'blog/talent.html')
 
 
 
 def blog(request) :
 
-  return HttpResponse('<h1>Blog Page</h1>')
+  return render(request, 'blog/blog.html')
 
 
 
 def about(request) :
 
-  return HttpResponse('<h1>Blog About</h1>')
+  return render(request, 'blog/about.html')
 
 
 
 def contact(request) :
 
-  return HttpResponse('<h1>Blog Contact</h1>')
+  return render(request, 'blog/contact.html')
 
 
 
