@@ -3,40 +3,91 @@ from django.http import HttpResponse
 
 
 
+# Dummy data to portray our home db table
+posts = [
+  {
+    'author': 'Victor Shaviya',
+    'title': 'Project 1 Blog',
+    'location': 'Nairobi',
+    'date_posted': 'March 11, 2022',
+    
+  },
+  {
+    'author': 'Josphine Mbaisi',
+    'title': 'Project 2 Digi',
+    'location': 'Nairobi',
+    'date_posted': 'Feb 22, 2021',
+    
+  },
+  {
+    'author': 'Norris Ambune',
+    'title': 'Project 3 Tennis',
+    'location': 'Nairobi',
+    'date_posted': 'April 28, 2020',
+    
+  }
+]
+
+
 # Create your views here.
 def home(request) :
 
-  return render(request, 'blog/home.html')
+  context = {
+    'posts': posts,
+    'title': 'ShawardS~Home',
+  }
+
+  return render(request, 'blog/home.html', context)
 
 
 
 def collection(request) :
 
-  return render(request, 'blog/collection.html')
+  context = {
+    'title': 'ShawardS~Collection',
+  }
+
+  return render(request, 'blog/collection.html', context)
 
 
 
 def talent(request) :
 
-  return render(request, 'blog/talent.html')
+  context = {
+    'title': 'ShawardS~Talent',
+  }
+
+  return render(request, 'blog/talent.html', context)
 
 
 
 def blog(request) :
 
-  return render(request, 'blog/blog.html')
+  context = {
+    'title': 'ShawardS~Blog',
+  }
+
+  return render(request, 'blog/blog.html', context)
 
 
 
 def about(request) :
 
-  return render(request, 'blog/about.html')
+  context = {
+    'title': 'ShawardS~About',
+  }
+
+  return render(request, 'blog/about.html', context)
 
 
 
 def contact(request) :
 
-  return render(request, 'blog/contact.html')
+  context = {
+    'title': 'ShawardS~Contact',
+  }
+
+  return render(request, 'blog/contact.html', context)
 
 
 
