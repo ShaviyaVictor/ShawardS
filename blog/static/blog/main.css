@@ -33,7 +33,17 @@ a, button {
   font-family: 'Lora', serif;
 }
 
+.site-header .navbar-nav .nav-link {
+  color: #000;
+}
 
+.site-header .navbar-nav .nav-link:hover {
+  color: #444444;
+}
+
+.site-header .navbar {
+  background-color: #FCFCFC;
+}
 
 
 
@@ -68,7 +78,7 @@ a {
 }
 
 .futa:hover {
-  color: rgb(101, 209, 101) !important;
+  color: #3163EF !important;
 }
 
 
