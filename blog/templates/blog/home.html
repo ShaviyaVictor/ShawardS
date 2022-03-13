@@ -5,22 +5,36 @@
 
 {% block content %}
 
-  <h1>Blog Home</h1>
+  
+<h1>Blog Home</h1>
 
+<div class="row row-cols-1 row-cols-md-3 g-4">
   {% for post in posts %}
-    
-    <a href="#">
-      <img class="post-img" src="{{ post.image.url }}" alt="{{ post.project_name }}" style="border-radius: 5px; margin: 0.8em; height: 10rem;">
-    </a>
-    
-    <h6>
-      {{ post.project_name }}
-    </h6>
-    
-    <p>
-      By {{ post.author }}, {{ post.date_posted }}
-    </p>
+
+    <div class="col-md-3 mt-4">
+      <div class="card h-100">
+        <a href="#">
+          <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.project_name }}">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">{{ post.project_name }}</h5>
+          <p class="card-text">
+            By <strong>{{ post.author }}</strong>
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">{{ post.date_posted|date:'F d, Y' }}</small>
+        </div>
+      </div>
+    </div>
+
+
   {% endfor %}
 
+</div>
+
+
+  <!-- Start of the image cards -->
+  
 
 {% endblock content %}
