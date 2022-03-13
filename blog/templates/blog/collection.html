@@ -7,4 +7,30 @@
 
   <h1>Blog Collection Page</h1>
 
+  {% for post in posts %}
+  
+  <div class="container">
+    <div class="card mb-3" style="max-width: 100%;">
+    
+
+      <div class="row g-0 align-self-center">
+        <div class="col-md-8">
+          <img src="{{ post.image.url }}" class="img-fluid rounded-start" alt="{{ post.project_name }}">
+        </div>
+        <div class="col-md-4">
+          <div class="card-body">
+            <p class="card-text">
+              By <strong>{{ post.author }}</strong>
+            </p>
+            <p class="card-text"><small class="text-muted">{{ post.date_posted|date:'F d, Y' }}</small></p>
+          </div>
+        </div>
+      </div>
+
+   
+  </div>
+  </div>
+
+  {% endfor %}
+
 {% endblock content %}

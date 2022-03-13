@@ -4,32 +4,6 @@ from .models import Post
 
 
 
-# Dummy data to portray our home db table
-posts = [
-  {
-    'author': 'Victor Shaviya',
-    'title': 'Project 1 Blog',
-    'location': 'Nairobi',
-    'date_posted': 'March 11, 2022',
-    
-  },
-  {
-    'author': 'Josphine Mbaisi',
-    'title': 'Project 2 Digi',
-    'location': 'Nairobi',
-    'date_posted': 'Feb 22, 2021',
-    
-  },
-  {
-    'author': 'Norris Ambune',
-    'title': 'Project 3 Tennis',
-    'location': 'Nairobi',
-    'date_posted': 'April 28, 2020',
-    
-  }
-]
-
-
 # Create your views here.
 def home(request) :
 
@@ -45,6 +19,7 @@ def home(request) :
 def collection(request) :
 
   context = {
+    'posts': Post.objects.all(),
     'title': 'ShawardS~Collection',
   }
 
