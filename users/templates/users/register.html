@@ -5,36 +5,46 @@
 
 {% block content %}
 
-  <h1>Blog Register Page</h1>
+  <h1 class="text-center">Blog Register Page</h1>
 
-  <div class="content-section">
 
-    <form method="POST" action="">
-      {% csrf_token %}
+  <!-- Form start -->
+  <div class="content-section container">
 
-      <fieldset class="form-group">
-        <legend class="border-bottom mb-4">
-          Join Today
-        </legend>
+    <div class="row">
 
-        {{ form }}
-      </fieldset>
+      <div class="col-center-box mx-auto">
 
-      <div class="form-group">
-        <button class="btn btn-outline-info" type="submit">
-          REGISTER
-        </button>
+        <form method="POST" action="">
+          {% csrf_token %}
+    
+          <fieldset class="form-group">
+            <legend class="border-bottom mb-4">
+              Join Today
+            </legend>
+    
+            {{ form }}
+          </fieldset>
+    
+          <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">
+              REGISTER
+            </button>
+          </div>
+    
+        </form>
+    
+        <div class="border-top">
+    
+          <small class="text-muted">
+            Already have an account?<a href="#" class="ml-2">Sign in</a>
+          </small>
+    
+        </div>pt-3
+  
       </div>
 
-    </form>
-
-    <div class="border-top">
-
-      <small class="text-muted">
-        Already have an account?<a href="#" class="ml-2">Sign in</a>
-      </small>
-
-    </div>pt-3
+    </div>
 
   </div>
 
