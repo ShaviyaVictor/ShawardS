@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from .forms import UserRegisterForm
 
 
 
@@ -9,7 +9,7 @@ from django.contrib import messages
 def register(request) :
 
   if request.method == 'POST' :
-    form = UserCreationForm(request.POST)
+    form = UserRegisterForm(request.POST)
 
     if form.is_valid() :
       form.save()
@@ -19,6 +19,6 @@ def register(request) :
       return redirect('blog-home')
 
   else :
-    form = UserCreationForm()
+    form = UserRegisterForm()
 
   return render(request, 'users/register.html', { 'form':form })
