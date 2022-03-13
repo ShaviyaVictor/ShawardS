@@ -5,19 +5,17 @@
 
 {% block content %}
 
-  <h1 class="text-center">Blog Register Page</h1>
-
 
   <!-- Form start -->
-  <div class="content-section container" style="background: #ffffff;
-  padding: 10px 20px;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
-  margin-bottom: 20px;">
+  <div class="content-section container mt-5">
 
     <div class="row">
 
-      <div class="col-center-box mx-auto">
+      <div class="col-center-box mx-auto" style="background: #ffffff;
+      padding: 10px 20px;
+      border: 1px solid #dddddd;
+      border-radius: 3px;
+      margin-bottom: 20px;">
 
         <form method="POST" action="">
           {% csrf_token %}
@@ -27,7 +25,7 @@
               Join Today
             </legend>
     
-            {{ form }}
+            {{ form.as_p }}
           </fieldset>
     
           <div class="form-group">
