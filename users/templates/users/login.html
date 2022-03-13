@@ -23,7 +23,7 @@
     
           <fieldset class="form-group">
             <legend class="border-bottom mb-4">
-              Login to continue
+              Login
             </legend>
     
             {{ form|crispy }}
@@ -40,7 +40,7 @@
         <div class="border-top pt-3">
     
           <small class="text-muted">
-            Don't have an account?<a href="#" class="ml-2">Register</a>
+            Don't have an account?<a href="{% url 'register' %}" class="ml-2">Register</a>
           </small>
     
         </div>
