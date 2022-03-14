@@ -7,9 +7,57 @@
 {% block content %}
 
 
-  <h1>
-    Profile page for {{ user.username }}
-  </h1>
+
+<!-- Trying an awesome profile card -->
+
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-10 mt-5 pt-5">
+
+      <div class="row z-depth-3">
+        
+        <div class="col-sm-4 bg-info rounded-left">
+          <div class="card-block text-center text-white pt-3">
+            <img class="rounded-circle account-img" src="{{ user.profile.profile_img.url }}">
+            <h4 class="font-weight-bold mt-4">
+              {{ user.username }}
+            </h4>
+            <i class="bi bi-pencil-square" style="font-size: 2em;"></i>
+          </div>
+        </div>
+
+        <div class="col-sm-8 bg-white rounded-right">
+          <h3 class="mt-3 text-center">
+            About me
+          </h3>
+          <hr class="badge-primary mt-0 w-25">
+          <div class="row">
+            <div class="col">
+              <p class="font-weight-bold">
+                Bio:
+              </p>
+              <p>
+                {{ user.profile.bio }}
+              </p>
+              <div class="card-footer mt-5">
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="text-secondary">{{ user.email }}</p>
+                  </div>
+                  <div class="col-6 col-md-4">
+                    <small class="text-muted">{{ user.profile.location }}</small>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
  
 
 {% endblock content %}
