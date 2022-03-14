@@ -5,31 +5,32 @@
 
 {% block content %}
 
-  
-<h2 class="kala">Blog Home</h2>
+<!-- View style for a single post -->
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  
 
-  <div class="col-md-3 mt-4">
-    <div class="card h-100">
-      <a href="#">
-        <img src="{{ object.image.url }}" class="card-img-top" alt="{{ object.project_name }}">
-      </a>
-      <div class="card-body">
-        <h5 class="card-title border-bottom">{{ object.project_name }}</h5>
-        <p class="card-text"><img class="rounded-circle" style="height: 2em; height: 2em;" src="{{ object.author.profile.profile_img.url }}" alt="">
-          By <a href="{% url 'profile' %}"><strong>{{ object.author }}</strong></a>
-        </p>
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-10 pt-5">
+
+      <div class="row z-depth-3">
+        
+        <div class="col-sm-8 bg-transparent rounded-left mx-auto border">
+          <div class="card-block pt-3">
+            <img src="{{ object.image.url }}" class="card-img-top" alt="{{ object.project_name }}">
+            <h5 class="card-title border-bottom pt-3 pb-3">{{ object.project_name }}</h5>
+            <p class="card-text"><img class="rounded-circle" style="height: 2em; height: 2em;" src="{{ object.author.profile.profile_img.url }}" alt="">
+              By <a href="{% url 'profile' %}"><strong>{{ object.author }}</strong></a>
+            </p>
+            <div class="card-footer">
+              <small class="text-muted" style="float: right;">{{ object.date_posted|date:'F d, Y' }}</small>
+            </div>        
+          </div>
+        </div>
+
       </div>
-      <div class="card-footer">
-        <small class="text-muted" style="float: right;">{{ object.date_posted|date:'F d, Y' }}</small>
-      </div>
+
     </div>
   </div>
-
- 
-
 </div>
 
 
