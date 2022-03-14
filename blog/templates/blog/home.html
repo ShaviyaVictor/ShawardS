@@ -13,7 +13,7 @@
 
     <div class="col-md-3 mt-4">
       <div class="card h-100">
-        <a href="#">
+        <a href="{% url 'post-detail' post.id %}">
           <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.project_name }}">
         </a>
         <div class="card-body">

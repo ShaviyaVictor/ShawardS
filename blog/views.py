@@ -10,6 +10,7 @@ from django.views.generic import ListView, DetailView
 class PostListView(ListView) :
   model = Post
 
+  # <app>/<model>_<viewtype>.html
   template_name = 'blog/home.html'
 
   context_object_name = 'posts'
@@ -31,6 +32,8 @@ class PostListView(ListView) :
 
 class PostDetailView(DetailView) :
   model = Post
+
+  
 
   
 
