@@ -38,8 +38,10 @@ def profile(request) :
 @login_required
 def update_profile(request) :
 
-  u_form = UserUpdateForm()
-  p_form = ProfileUpdateForm()
+
+
+  u_form = UserUpdateForm(instance=request.user)
+  p_form = ProfileUpdateForm(instance=request.user.profile)
 
   context = {
     'u_form': u_form,
