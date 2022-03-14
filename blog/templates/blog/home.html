@@ -17,7 +17,7 @@
           <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.project_name }}">
         </a>
         <div class="card-body">
-          <h5 class="card-title border-bottom">{{ post.project_name }}</h5>
+          <h5 class="card-title border-bottom pb-2">{{ post.project_name }}</h5>
           <p class="card-text"><img class="rounded-circle" style="height: 2em; height: 2em;" src="{{ post.author.profile.profile_img.url }}" alt="">
             By <a href="{% url 'profile' %}"><strong>{{ post.author }}</strong></a>
           </p>
