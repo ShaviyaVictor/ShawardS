@@ -1,0 +1,48 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+
+  <!-- Form start -->
+  <div class="content-section container mt-5">
+
+    <div class="row">
+
+      <div class="col-center-box mx-auto" style="background: #ffffff;
+      padding: 10px 20px;
+      border: 1px solid #dddddd;
+      border-radius: 3px;
+      margin-bottom: 20px;">
+
+        <form method="POST" action="" enctype="multipart/form-data">
+          
+          {% csrf_token %}
+    
+          <fieldset class="form-group">
+            <legend class="border-bottom mb-4">
+              DELETE SITE?
+            </legend>
+            <h4>
+              Are you sure you want to delete the site "{{ object.project_name }}"
+            </h4>
+    
+          </fieldset>
+    
+          <div class="form-group">
+            <button class="btn btn-outline-danger" type="submit">
+              YES, DELETE
+            </button>
+            <a class="btn btn-outline-secondary" type="submit" href="{% url 'post-detail' object.id %}">
+              CANCEL
+            </a>
+          </div>
+    
+        </form>
+  
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock content %}
