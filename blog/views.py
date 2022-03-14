@@ -2,7 +2,7 @@ from re import template
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Post
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 
 
@@ -18,15 +18,21 @@ class PostListView(ListView) :
 
 
 
+# def home(request) :
 
-def home(request) :
+#   context = {
+#     'posts': Post.objects.all(),
+#     'title': 'ShawardS~Home',
+#   }
 
-  context = {
-    'posts': Post.objects.all(),
-    'title': 'ShawardS~Home',
-  }
+#   return render(request, 'blog/home.html', context)
 
-  return render(request, 'blog/home.html', context)
+
+
+class PostDetailView(DetailView) :
+  model = Post
+
+  
 
 
 
