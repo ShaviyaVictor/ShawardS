@@ -92,7 +92,7 @@
 
               {% if user.is_authenticated %}
 
-              <a class="nav-item nav-link mr-3" href="#">SUBMIT YOUR SITE!</a>
+              <a class="nav-item nav-link mr-3" href="{% url 'post-create' %}">SUBMIT YOUR SITE!</a>
 
               {%   else%}
 
