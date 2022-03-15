@@ -17,9 +17,9 @@ class Post(models.Model) :
     return self.project_name
 
 
-  # Functionality provided by class based view
-  # class Meta :
-  #   ordering = ['-date_posted']
+  # Functionality provided by class based view but should be active for the collection page
+  class Meta :
+    ordering = ['-date_posted']
 
 
 
