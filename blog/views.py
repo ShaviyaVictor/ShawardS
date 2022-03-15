@@ -22,6 +22,21 @@ class PostListView(ListView) :
 
 
 
+# Creating a user's posts view
+class UserPostListView(ListView) :
+  model = Post
+
+  # <app>/<model>_<viewtype>.html
+  template_name = 'blog/user_posts.html'
+
+  context_object_name = 'posts'
+
+  ordering = ['-date_posted']
+
+  paginate_by = 8
+
+
+
 # def home(request) :
 
 #   context = {
