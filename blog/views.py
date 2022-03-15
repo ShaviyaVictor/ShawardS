@@ -18,7 +18,7 @@ class PostListView(ListView) :
 
   ordering = ['-date_posted']
 
-  paginate_by = 2
+  paginate_by = 8
 
 
 
