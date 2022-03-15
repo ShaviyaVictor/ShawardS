@@ -1,0 +1,86 @@
+{% extends 'blog/base.html' %}
+
+
+<h3 class="mb-3">
+  Posts by <strong>{{ view.kwargs.username }}</strong> ({{ page_obj.paginator.count }})
+</h3>
+
+{% block content %}
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for post in posts %}
+
+    <div class="col-md-3 mt-4">
+      <div class="card h-100">
+        <a href="{% url 'post-detail' post.id %}">
+          <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.project_name }}">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title border-bottom pb-2">{{ post.project_name }}</h5>
+          <p class="card-text"><img class="rounded-circle" style="height: 2em; height: 2em;" src="{{ post.author.profile.profile_img.url }}" alt="">
+            By <a href="{% url 'user_posts' post.author.username %}"><strong>{{ post.author }}</strong></a>
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted" style="float: right;">{{ post.date_posted|date:'F d, Y' }}</small>
+        </div>
+      </div>
+    </div>
+
+
+  {% endfor %}
+
+  
+
+</div>
+
+
+  <!-- Start of pagination functionality -->
+
+  <div class="content-section container mt-5">
+
+    <div class="row">
+
+      <div class="col-center-box mx-auto">
+
+        <!-- Start of pagination logic -->
+        {% if is_paginated %}
+
+        <!-- First and Previous Page logic -->
+        {% if page_obj.has_previous %}
+          <a href="?page=1" class="btn btn-outline-info mb-4">First</a>
+          <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-outline-info mb-4">Prev..</a>
+        {% endif %}
+
+        <!-- Looping through the page numbers around the current page  -->
+        {% for num in page_obj.paginator.page_range %}
+          <!-- Getting the current page -->
+          {% if page_obj.number == num %}
+            <a href="?page={{ num }}" class="btn btn-info mb-4">
+              {{ num }}
+            </a>
+          <!-- Listing the previous and next 3 pages -->
+          {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+            <a href="?page={{ num }}" class="btn btn-outline-info mb-4">
+            {{ num }}
+            </a>
+            
+          {% endif %}
+        {% endfor %}
+
+        <!-- Next and Last pages logic  -->
+        {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}" class="btn btn-outline-info mb-4">Next</a>
+          <a href="?page={{ page_obj.paginator.num_pages }}" class="btn btn-outline-info mb-4">Last</a>
+        {% endif %}
+
+        {% endif %}
+  
+      </div>
+
+    </div>
+
+  </div>
+  
+
+{% endblock content %}
