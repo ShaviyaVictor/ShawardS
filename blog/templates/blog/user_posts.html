@@ -17,10 +17,10 @@
           <img src="{{ post.image.url }}" class="card-img-top" alt="{{ post.project_name }}">
         </a>
         <div class="card-body">
-          <h5 class="card-title border-bottom pb-2">{{ post.project_name }}</h5>
-          <p class="card-text"><img class="rounded-circle" style="height: 2em; height: 2em;" src="{{ post.author.profile.profile_img.url }}" alt="">
+          <h5 class="card-title border-top pt-2">{{ post.project_name }}</h5>
+          <!-- <p class="card-text"><img class="rounded-circle" style="height: 2em; height: 2em;" src="{{ post.author.profile.profile_img.url }}" alt="">
             By <a href="{% url 'user_posts' post.author.username %}"><strong>{{ post.author }}</strong></a>
-          </p>
+          </p> -->
         </div>
         <div class="card-footer">
           <small class="text-muted" style="float: right;">{{ post.date_posted|date:'F d, Y' }}</small>
