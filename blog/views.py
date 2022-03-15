@@ -87,15 +87,30 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin,DeleteView) :
 
 
 
-def collection(request) :
+# def collection function replacement
+class PostListView(ListView) :
+  model = Post
 
-  context = {
-    'posts': Post.objects.all(),
-    'title': 'ShawardS~Collection',
-    'paginate_by': 2,
-  }
+  # <app>/<model>_<viewtype>.html
+  template_name = 'blog/collection.html'
 
-  return render(request, 'blog/collection.html', context)
+  context_object_name = 'posts'
+
+  ordering = ['-date_posted']
+
+  paginate_by = 8
+
+
+
+# def collection(request) :
+
+#   context = {
+#     'posts': Post.objects.all(),
+#     'title': 'ShawardS~Collection',
+#     'paginate_by': 2,
+#   }
+
+#   return render(request, 'blog/collection.html', context)
 
 
 
