@@ -53,19 +53,19 @@
           <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">            
-            <div class="navbar-nav mr-auto">
+            <div class="navbar-nav mr-auto font-weight-bold">
               <a class="nav-item nav-link" href="{% url 'blog-home' %}">
                 HOME
               </a>
               <a class="nav-item nav-link" href="{% url 'blog-collection' %}">
                 COLLECTIONS
               </a>
-              <a class="nav-item nav-link" href="{% url 'blog-talent' %}">
+              <!-- <a class="nav-item nav-link" href="{% url 'blog-talent' %}">
                 TALENT
               </a>
               <a class="nav-item nav-link" href="{% url 'blog-blog' %}">
                 BLOG
-              </a>
+              </a> -->
               <a class="nav-item nav-link" href="{% url 'blog-about' %}">
                 ABOUT
               </a>
@@ -78,9 +78,6 @@
               <a class="nav-item nav-link" href="{% url 'profile' %}">
                 PROFILE
               </a>
-              <a class="nav-item nav-link" href="{% url 'logout' %}">
-                LOGOUT
-              </a>
 
               {% endif %}
 
@@ -88,10 +85,10 @@
 
             <!-- Navbar Right Side -->
             
-            <div class="navbar-nav">
+            <div class="navbar-nav font-weight-bold">
 
               {% if user.is_authenticated %}
-
+              
               <a class="nav-item nav-link mr-3" href="{% url 'post-create' %}">SUBMIT YOUR SITE!</a>
 
               {%   else%}
@@ -104,6 +101,19 @@
                 <input class="form-control me-2" type="search" placeholder="Find a photo..." aria-label="Search">
               </form>
               
+              
+            </div>
+
+            <div class="navbar-nav font-weight-bold">
+
+              {% if user.is_authenticated %}
+
+              <a class="nav-item nav-link" href="{% url 'logout' %}">
+                LOGOUT
+              </a>
+
+              {% endif %}
+
             </div>
 
 
