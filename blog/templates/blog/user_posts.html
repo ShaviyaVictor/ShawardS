@@ -1,11 +1,12 @@
 {% extends 'blog/base.html' %}
 
 
-<h3 class="mb-3">
-  Posts by <strong>{{ view.kwargs.username }}</strong> ({{ page_obj.paginator.count }})
-</h3>
 
 {% block content %}
+
+<h5 class="mb-2 mt-2">
+  Posts by <strong style="color: cornflowerblue; text-decoration: underline;">{{ view.kwargs.username }}</strong> ({{ page_obj.paginator.count }})
+</h5>
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
   {% for post in posts %}
