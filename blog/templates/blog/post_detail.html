@@ -22,7 +22,7 @@
             <img src="{{ object.image.url }}" class="card-img-top" alt="{{ object.project_name }}">
             <h5 class="card-title border-bottom pt-3 pb-3">{{ object.project_name }}</h5>
             <p class="card-text"><img class="rounded-circle" style="height: 2em; height: 2em;" src="{{ object.author.profile.profile_img.url }}" alt="">
-              By <a href="{% url 'profile' %}"><strong>{{ object.author }}</strong></a>
+              By <a href="{% url 'user_posts' post.author.username %}"><strong>{{ object.author }}</strong></a>
             </p>
             <div class="card-footer">
               {% if object.author == user %}
