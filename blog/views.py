@@ -7,6 +7,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 # Create your views here.
+# def home function replacement
 class PostListView(ListView) :
   model = Post
 
@@ -16,6 +17,8 @@ class PostListView(ListView) :
   context_object_name = 'posts'
 
   ordering = ['-date_posted']
+
+  paginate_by = 2
 
 
 

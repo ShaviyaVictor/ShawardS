@@ -2,7 +2,7 @@
 
 This is a clone of Instagram where people share their images and videos for other users to view. Users can sign up, login, view and post photos, search and follow other users.     
 Below is the project's screenshot:     
-![ShawardS_Home.Pg_Screenshot](https://github.com/ShaviyaVictor/ShawardS/blob/main/media/Screenshot%20home_pg.png)        
+![ShawardS_Home.Pg_Screenshot](https://github.com/ShaviyaVictor/ShawardS/blob/main/media/Screenshot%20Home_pg%202022-03-15%2012-14-10.png)        
 ![ShawardS_Profile.Pg_Screenshot](https://github.com/ShaviyaVictor/ShawardS/blob/main/media/Screenshot%20profile_pg.png)          
 ![ShawardS_register_form_Screenshot](https://github.com/ShaviyaVictor/ShawardS/blob/main/media/Screenshot%20register%20form.png)          
 ![ShawardS_Profile_update.Pg_Screenshot](https://github.com/ShaviyaVictor/ShawardS/blob/main/media/Screenshot%20profile_update_form.png)          
