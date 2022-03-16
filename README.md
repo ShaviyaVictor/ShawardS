@@ -11,7 +11,7 @@ Below is the project's screenshot:
 
 #### Live link to site
 The project was deployed to Heroku and GitHub pages for publication.     
-* To view the [project's Heroku live site](#).         
+* To view the [project's Heroku live site](https://shawards.herokuapp.com/).         
 * To view the [project's Figma mockup design](https://www.figma.com/file/fj1Xt9GEdbx8WOwULF7px8/ShawardS?node-id=0%3A1).
 
 ## Application Setup Instructions
