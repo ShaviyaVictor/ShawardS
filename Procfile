@@ -1,0 +1,1 @@
+web: gunicorn shawards_project.wsgi 
